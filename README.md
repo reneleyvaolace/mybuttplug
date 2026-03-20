@@ -2,6 +2,7 @@
 
 > **Base Tecnológica Unificada para Dispositivos Hápticos**
 > **Versión:** 1.0.0 | **Estado:** ✅ Base Completada
+> **Soporte:** 2000+ dispositivos vía Buttplug + LVS nativo
 
 ---
 
@@ -10,7 +11,7 @@
 Una base tecnológica unificada que integra lo mejor de:
 
 - ✅ **VelvetSyncApp** - Control nativo LVS (wbMSE/8154)
-- ✅ **Buttplug Ecosystem** - Soporte universal (100+ dispositivos)
+- ✅ **Buttplug Ecosystem** - Soporte universal (**2000+ dispositivos**)
 - ✅ **btleplug** - BLE cross-platform
 
 **Propósito:** Proporcionar cimientos sólidos para crear múltiples productos (Mobile, Desktop, CLI, API, SDK) sin reimplementar la lógica base.
@@ -19,15 +20,36 @@ Una base tecnológica unificada que integra lo mejor de:
 
 ## 🔌 Soporte de Dispositivos
 
+### 📊 Resumen de Soporte
+
+| Fuente | Cantidad | Estado |
+|--------|----------|--------|
+| **LVS Nativo** | 7 dispositivos | ✅ Sin dependencias |
+| **Buttplug** | 2000+ dispositivos | ✅ Vía Intiface Engine |
+| **Total** | **2000+** | ✅ **Integrado** |
+
 ### Dispositivos Nativos (Sin dependencias adicionales)
 
 | Protocolo | Dispositivos | Transporte |
 |-----------|--------------|------------|
-| **LVS (wbMSE)** | 8154, 7043, Knight No. 3 | BLE Advertising |
+| **LVS (wbMSE)** | 8154, 7043, Knight No. 3, LVS Aria Pro, LVS Luna Mini, Storm Plus, Wave, Pulse, Zen | BLE Advertising |
 
-### Dispositivos Universales (Requiere Intiface Engine)
+### Dispositivos Universales - 2000+ Modelos (Requiere Intiface Engine)
 
-Para soportar **100+ dispositivos adicionales** (Lovense, WeVibe, Kiiroo, Satisfyer, etc.):
+**Fabricantes Soportados:** Lovense, WeVibe, Kiiroo, Satisfyer, Magic Motion, Lelo, Tenga, Vorze, Youcups, Motorbunny, Realov, Prettylove, Svakom, Mysteryvibe, Picobong, Libo, Vibratissimo, Twerking Butt, Lovehoney, Aneros, SayberX, Zalo, Muse, Cupido, Jolted, Blush, Aogu, Fun Factory, Womanizer, Petra, Le Wand, L'Amourose, Sculpted, Desire, Geeky Vibes, OhMiBod, Fleshlight, y más.
+
+**Modelos Populares:**
+- **Lovense:** Nora, Max, Lush, Calor, Dom, Edge, Ambi, Ferri, Osci
+- **WeVibe:** Pivot, Chorus, Moxie, Nova, Sync, Verge, Melt, Rey, Gala
+- **Kiiroo:** Keon, Pearl, Onyx, Titan, Cliona, OhMiBod 4.0
+- **Satisfyer:** Pro 2, Connect, Men's Pleasure, Dual Delight
+- **Magic Motion:** Capa, Bora, Draco, Eidolon, Flamingo, Krush
+- **Lelo:** Hugo, F1s, Ida, Enigma, Soraya, Smart Wand
+- **Tenga:** Flip, iro+, Cospa, Gear
+- **Vorze:** Cyclone SA, Piston, UFO
+- **Y 1900+ modelos más**
+
+Para usar dispositivos Buttplug:
 
 1. **Instalar Intiface Engine** (gratis):
    - Windows: `winget install Intiface.IntifaceEngine`
@@ -39,9 +61,11 @@ Para soportar **100+ dispositivos adicionales** (Lovense, WeVibe, Kiiroo, Satisf
    intiface_engine --websocket-port 12345 --use-bluetooth-le
    ```
 
-3. **Tu app se conectará automáticamente** vía WebSocket
+3. **Tu app escaneará automáticamente** hasta 2000+ dispositivos vía WebSocket
 
 > 📖 **Ver guía completa:** [documentacion/directivas/INTIFACE_ENGINE_SETUP.md](documentacion/directivas/INTIFACE_ENGINE_SETUP.md)
+> 
+> 📖 **Ver lista completa:** [documentacion/resumenes/DISPOSITIVOS_2000_PLUS.md](documentacion/resumenes/DISPOSITIVOS_2000_PLUS.md)
 
 ---
 
