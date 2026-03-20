@@ -2,8 +2,20 @@
 // Velvet Sync · lib/services/buttplug_bridge_service.dart
 // Puente Buttplug - Conexión WebSocket a Intiface Engine
 // ═══════════════════════════════════════════════════════════════
+//
+// 📖 RECURSOS:
+// - Buttplug-dart: https://pub.dev/packages/buttplug
+// - Intiface Engine: https://github.com/intiface/intiface-engine
+// - Buttplug.io: https://buttplug.io
+// - Documentación: https://docs.buttplug.io
+//
+// 🔌 INSTALACIÓN DE INTIFACE ENGINE:
+// Ver: documentacion/directivas/INTIFACE_ENGINE_SETUP.md
+//
+// ═══════════════════════════════════════════════════════════════
 
 import 'dart:async';
+import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:buttplug/buttplug.dart';
@@ -602,6 +614,55 @@ class ButtplugBridgeService extends ChangeNotifier {
     _connectionState = state;
     lvsLog('Estado Buttplug: ${state.name}', tag: 'BUTTPLUG');
     notifyListeners();
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // Utilidades de Detección
+  // ═══════════════════════════════════════════════════════════════
+
+  /// Verifica si Intiface Engine está instalado y disponible
+  ///
+  /// Retorna `true` si el comando `intiface_engine` está disponible en PATH
+  static Future<bool> isIntifaceEngineInstalled() async {
+    try {
+      final result = await Process.run(
+        Platform.isWindows ? 'where' : 'which',
+        ['intiface_engine'],
+      );
+      return result.exitCode == 0 && result.stdout.toString().isNotEmpty;
+    } catch (e) {
+      lvsLog('Error verificando Intiface Engine: $e', tag: 'BUTTPLUG');
+      return false;
+    }
+  }
+
+  /// Obtiene instrucciones de instalación según la plataforma
+  static String getInstallationInstructions() {
+    if (Platform.isWindows) {
+      return 'Windows: winget install Intiface.IntifaceEngine';
+    } else if (Platform.isMacOS) {
+      return 'macOS: brew install intiface-engine';
+    } else if (Platform.isLinux) {
+      return 'Linux: cargo install intiface_engine';
+    }
+    return 'Ver: https://github.com/intiface/intiface-engine';
+  }
+
+  /// Verifica si el puerto WebSocket está accesible
+  ///
+  /// [host] - Host del servidor (default: localhost)
+  /// [port] - Puerto WebSocket (default: 12345)
+  static Future<bool> isWebSocketPortAccessible({
+    String host = 'localhost',
+    int port = 12345,
+  }) async {
+    try {
+      final socket = await Socket.connect(host, port, timeout: const Duration(seconds: 2));
+      await socket.close();
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 
   // ═══════════════════════════════════════════════════════════════

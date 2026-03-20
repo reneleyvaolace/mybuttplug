@@ -1,6 +1,6 @@
 # 🏗️ Velvet Sync Platform
 
-> **Base Tecnológica Unificada para Dispositivos Hápticos**  
+> **Base Tecnológica Unificada para Dispositivos Hápticos**
 > **Versión:** 1.0.0 | **Estado:** ✅ Base Completada
 
 ---
@@ -14,6 +14,34 @@ Una base tecnológica unificada que integra lo mejor de:
 - ✅ **btleplug** - BLE cross-platform
 
 **Propósito:** Proporcionar cimientos sólidos para crear múltiples productos (Mobile, Desktop, CLI, API, SDK) sin reimplementar la lógica base.
+
+---
+
+## 🔌 Soporte de Dispositivos
+
+### Dispositivos Nativos (Sin dependencias adicionales)
+
+| Protocolo | Dispositivos | Transporte |
+|-----------|--------------|------------|
+| **LVS (wbMSE)** | 8154, 7043, Knight No. 3 | BLE Advertising |
+
+### Dispositivos Universales (Requiere Intiface Engine)
+
+Para soportar **100+ dispositivos adicionales** (Lovense, WeVibe, Kiiroo, Satisfyer, etc.):
+
+1. **Instalar Intiface Engine** (gratis):
+   - Windows: `winget install Intiface.IntifaceEngine`
+   - macOS: `brew install intiface-engine`
+   - Linux: `cargo install intiface_engine`
+
+2. **Iniciar el servicio**:
+   ```bash
+   intiface_engine --websocket-port 12345 --use-bluetooth-le
+   ```
+
+3. **Tu app se conectará automáticamente** vía WebSocket
+
+> 📖 **Ver guía completa:** [documentacion/directivas/INTIFACE_ENGINE_SETUP.md](documentacion/directivas/INTIFACE_ENGINE_SETUP.md)
 
 ---
 
