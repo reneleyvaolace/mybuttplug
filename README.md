@@ -625,9 +625,16 @@ list? [Submit an issue to this repo and let us know!](https://github.com/buttplu
 - [Edge-O-Matic](https://edgeomatic.buttplug.io)
   - Orgasm Denial Hardware Product w/ [Open Source Firmware](https://github.com/maustec)
   - Improved Nogasm Orgasm Denial system.
-- [Buttplug Lelo ESP32 Bridge](https://github.com/MonomoriumP/Buttplug.io--Lelo)
+- [Buttplug Lelo ESP32 Bridge](https://github.com/MonomoniumP/Buttplug.io--Lelo)
   - Free, open source, repo at https://github.com/MonomoriumP/Buttplug.io--Lelo
   - ESP32 bridge between Buttplug.io and Lelo's RF controlled toys.
+- [LVS-Gateway](https://github.com/IngeniousKink/LVS-Gateway)
+  - Free, open source, repo at https://github.com/IngeniousKink/LVS-Gateway
+  - ESP32 firmware that speaks Lovense BLE protocol to broadcast commands for MuSE/LoveSpouse toys.
+  - Enables Lovespouse/ZLMicro toys to work with XToys.app and potentially Buttplug.io via protocol bridging.
+- [Love Spouse Pro](https://play.google.com/store/apps/details?id=com.wb.lsr)
+  - Free, closed source
+  - Official app for Lovespouse/ZLMicro Bluetooth adult toys. Supports remote control, multi-device pairing, and partner sharing.
 
 ## Development and Libraries
 
@@ -686,6 +693,10 @@ list? [Submit an issue to this repo and let us know!](https://github.com/buttplu
   - Standalone Python client library for connecting to [Intiface
     Central](https://intiface.com/central) or [Intiface
     Engine](https://github.com/intiface/intiface-engine)
+- [pylovespouse](https://github.com/revenantfreddy/pylovespouse)
+  - Free, open source, repo at https://github.com/revenantfreddy/pylovespouse
+  - Available on [PyPi](https://pypi.org/project/pylovespouse/)
+  - Python library for direct interaction with Lovespouse devices via Bluetooth (Windows only)
 
 #### Haskell
 - [Buttplug Haskell](https://github.com/sullyj3/buttplug-hs-core)
@@ -878,3 +889,30 @@ list? [Submit an issue to this repo and let us know!](https://github.com/buttplu
   - DIY, 3D Printable multi-axis stroker project
 - [XToys](https://xtoys.app)
   - Web-based toy control app, including remote control with sharable links
+
+## ZLMICRO/Lovespouse Device Guide
+
+This section provides guidance for users with ZLMicro/Lovespouse devices (such as the FJ001 and similar models).
+
+### How It Works
+
+The ecosystem uses **Intiface Central** as the central hub:
+
+1. **Intiface Central**: A free, open-source desktop application that acts as a server. It connects to your toys via Bluetooth and exposes control to other applications.
+2. **Client Apps**: Any app from this list (games, video players, mods) connects to Intiface Central and sends commands.
+3. **ZLMICRO Compatibility**: ZLMICRO devices use proprietary 2.4g wireless protocols. Compatibility depends on Buttplug library implementation. The [LVS-Gateway](https://github.com/IngeniousKink/LVS-Gateway) project can bridge protocols for XToys.app and potentially Buttplug.io.
+
+### Quick Start Guide
+
+1. **Download Intiface Central**: Get it from [intiface.com/central](https://intiface.com/central). This is the foundation for everything.
+2. **Test with Buttplug Playground**: A simple web utility to verify connection and basic control.
+3. **Explore by Interest**:
+   - Video sync: [MultiFunPlayer](https://github.com/Yoooi0/MultiFunPlayer), [ScriptPlayer](https://github.com/FredTungsten/ScriptPlayer)
+   - Games: [Intiface Game Haptics Router](https://intiface.com/ghr), [Playful Plugins](https://furimanejo.itch.io/playful-plugins)
+   - Virtual Worlds: [OSCGoesBrrr](https://osc.toys/) (VRChat), [VibeCheck](https://github.com/SutekhVRC/VibeCheck)
+
+### Alternative Control Methods
+
+- **[Love Spouse Pro](https://play.google.com/store/apps/details?id=com.wb.lsr)**: Official app for direct Bluetooth control
+- **[pylovespouse](https://github.com/revenantfreddy/pylovespouse)**: Python library for direct control (Windows only)
+- **[LVS-Gateway](https://github.com/IngeniousKink/LVS-Gateway)**: ESP32 bridge for protocol translation to XToys/Buttplug
