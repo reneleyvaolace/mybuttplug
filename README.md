@@ -28,11 +28,19 @@ Una base tecnológica unificada que integra lo mejor de:
 | **Buttplug** | 2000+ dispositivos | ✅ Vía Intiface Engine |
 | **Total** | **2000+** | ✅ **Integrado** |
 
-### Dispositivos Nativos (Sin dependencias adicionales)
+### Dispositivos Nativos - Love Spouse (Sin dependencias adicionales)
 
-| Protocolo | Dispositivos | Transporte |
-|-----------|--------------|------------|
-| **LVS (wbMSE)** | 8154, 7043, Knight No. 3, LVS Aria Pro, LVS Luna Mini, Storm Plus, Wave, Pulse, Zen | BLE Advertising |
+| Protocolo | Dispositivos | Transporte | Catálogo |
+|-----------|--------------|------------|----------|
+| **LVS (wbMSE)** | Knight No. 3 (8154), 7043, +284 modelos Love Spouse | BLE Advertising | ✅ 2000+ productos |
+
+**Catálogo Love Spouse Completo:**
+- **284 productos** en `devices-categories-updated.csv`
+- **~1700+ productos** en archivos SQL (`insert_models_final.sql`, `insert_catalog_massive_v2.sql`)
+- **Funciones:** classic, music, shake, interactive, finger, video, game, explore, heating, voice, kegel
+- **Conexión:** 2.4G + BLE (prefijo: `77 62 4d 53 45`)
+
+> 📖 **Ver catálogo completo:** [documentacion/resumenes/CATALOGO_LOVE_SPOUSE.md](documentacion/resumenes/CATALOGO_LOVE_SPOUSE.md)
 
 ### Dispositivos Universales - 2000+ Modelos (Requiere Intiface Engine)
 
