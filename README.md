@@ -2,7 +2,7 @@
 
 > **Base Tecnológica Unificada para Dispositivos Hápticos**
 > **Versión:** 1.0.0 | **Estado:** ✅ Base Completada
-> **Soporte:** 2000+ dispositivos vía Buttplug + LVS nativo
+> **Soporte:** **2600+ dispositivos** (Love Spouse + Buttplug)
 
 ---
 
@@ -10,7 +10,7 @@
 
 Una base tecnológica unificada que integra lo mejor de:
 
-- ✅ **VelvetSyncApp** - Control nativo LVS (wbMSE/8154)
+- ✅ **VelvetSyncApp** - Control nativo LVS (wbMSE/8154) con **~600 dispositivos**
 - ✅ **Buttplug Ecosystem** - Soporte universal (**2000+ dispositivos**)
 - ✅ **btleplug** - BLE cross-platform
 
@@ -20,49 +20,104 @@ Una base tecnológica unificada que integra lo mejor de:
 
 ## 🔌 Soporte de Dispositivos
 
-### 📊 Resumen de Soporte
+### 📊 Resumen Global de Soporte
 
-| Fuente | Cantidad | Estado |
-|--------|----------|--------|
-| **LVS Nativo** | 7 dispositivos | ✅ Sin dependencias |
-| **Buttplug** | 2000+ dispositivos | ✅ Vía Intiface Engine |
-| **Total** | **2000+** | ✅ **Integrado** |
+| Fuente | Cantidad | Tipo | Estado |
+|--------|----------|------|--------|
+| **Love Spouse (wbMSE)** | ~600 dispositivos | Nativo | ✅ Sin dependencias |
+| **Buttplug Ecosystem** | 2000+ dispositivos | Universal | ✅ Vía Intiface Engine |
+| **TOTAL GLOBAL** | **2600+** | **Híbrido** | ✅ **Integrado** |
 
-### Dispositivos Nativos - Love Spouse (Sin dependencias adicionales)
+---
+
+### 🏷️ Dispositivos Nativos - Love Spouse / ZLMicro (~600 dispositivos)
+
+**Protocolo:** wbMSE (Love Spouse) - **Sin dependencias adicionales**
 
 | Protocolo | Dispositivos | Transporte | Catálogo |
 |-----------|--------------|------------|----------|
-| **LVS (wbMSE)** | Knight No. 3 (8154), 7043, +284 modelos Love Spouse | BLE Advertising | ✅ 2000+ productos |
+| **LVS (wbMSE)** | Knight No. 3 (8154), 7043, +284 modelos ZLMicro | BLE Advertising + 2.4G | ✅ ~600 productos |
 
 **Catálogo Love Spouse Completo:**
-- **284 productos** en `devices-categories-updated.csv`
-- **~1700+ productos** en archivos SQL (`insert_models_final.sql`, `insert_catalog_massive_v2.sql`)
+- **438 productos** en `catalog_dump.txt`
+- **284 productos** en `devices-categories-updated.csv` (18 columnas)
+- **~500+ productos** en archivos SQL (`insert_catalog_massive_v2.sql`, `insert_models_final.sql`)
 - **Funciones:** classic, music, shake, interactive, finger, video, game, explore, heating, voice, kegel
-- **Conexión:** 2.4G + BLE (prefijo: `77 62 4d 53 45`)
+- **Conexión:** BLE (prefijo: `77 62 4d 53 45`) + 2.4G
+
+**Prefijos de Modelo Soportados:**
+`AA*` (AATD, AAGS, AAHT, AAZD, AASJ, AAYJ, AAFJ), `HA*`, `HE*`, `ZA*`, `ZB*`, `YE*`, `MN*`, `EA*`, `RA*`, `LA*`, `CA*`, `DA*`, `BA*`, `JA*`, `MA*`, `NA*`, `GA*`, `WA*`, `YA*`, `CD*`, `FJ*`, `LC*`, `SC*`, `TD*`, `XB*`, `RB*`, `PB*`, `CB*`, `DB*`, `EB*`, `FB*`, `GB*`, `HB*`, `IB*`, `KB*`, `LB*`, `MB*`, `NB*`, `QB*`, `SB*`, `VB*`, `YB*`
 
 > 📖 **Ver catálogo completo:** [documentacion/resumenes/CATALOGO_LOVE_SPOUSE.md](documentacion/resumenes/CATALOGO_LOVE_SPOUSE.md)
+>
+> 📖 **Ver resumen global:** [documentacion/resumenes/RESUMEN_DISPOSITIVOS_GLOBAL.md](documentacion/resumenes/RESUMEN_DISPOSITIVOS_GLOBAL.md)
 
-### Dispositivos Universales - 2000+ Modelos (Requiere Intiface Engine)
+---
 
-**Fabricantes Soportados:** Lovense, WeVibe, Kiiroo, Satisfyer, Magic Motion, Lelo, Tenga, Vorze, Youcups, Motorbunny, Realov, Prettylove, Svakom, Mysteryvibe, Picobong, Libo, Vibratissimo, Twerking Butt, Lovehoney, Aneros, SayberX, Zalo, Muse, Cupido, Jolted, Blush, Aogu, Fun Factory, Womanizer, Petra, Le Wand, L'Amourose, Sculpted, Desire, Geeky Vibes, OhMiBod, Fleshlight, y más.
+### 🌐 Dispositivos Universales - 2000+ Modelos (Requiere Intiface Engine)
 
-**Modelos Populares:**
-- **Lovense:** Nora, Max, Lush, Calor, Dom, Edge, Ambi, Ferri, Osci
-- **WeVibe:** Pivot, Chorus, Moxie, Nova, Sync, Verge, Melt, Rey, Gala
-- **Kiiroo:** Keon, Pearl, Onyx, Titan, Cliona, OhMiBod 4.0
-- **Satisfyer:** Pro 2, Connect, Men's Pleasure, Dual Delight
-- **Magic Motion:** Capa, Bora, Draco, Eidolon, Flamingo, Krush
-- **Lelo:** Hugo, F1s, Ida, Enigma, Soraya, Smart Wand
-- **Tenga:** Flip, iro+, Cospa, Gear
-- **Vorze:** Cyclone SA, Piston, UFO
-- **Y 1900+ modelos más**
+**40+ Fabricantes Soportados:**
 
-Para usar dispositivos Buttplug:
+| Fabricante | Modelos Populares | Cantidad |
+|------------|-------------------|----------|
+| **Lovense** | Nora, Max, Lush, Calor, Dom, Edge, Ambi, Ferri, Osci, Hasmo | 50+ |
+| **WeVibe** | Pivot, Chorus, Moxie, Nova, Sync, Verge, Melt, Rey, Gala, Ditto | 30+ |
+| **Kiiroo** | Keon, Pearl, Onyx, Titan, Cliona, OhMiBod 4.0, Fuse | 20+ |
+| **Satisfyer** | Pro 2, Connect, Men's Pleasure, Dual Delight, Secrets | 25+ |
+| **Magic Motion** | Capa, Bora, Draco, Eidolon, Flamingo, Krush, Sword | 20+ |
+| **Lelo** | Hugo, F1s, Ida, Enigma, Soraya, Smart Wand, Tiani | 15+ |
+| **Tenga** | Flip, iro+, Cospa, Gear, Moon | 10+ |
+| **Vorze** | Cyclone SA, Piston, UFO, Bach | 10+ |
+| **Youcups/You2Toys** | VX001, Youcups | 15+ |
+| **Motorbunny** | Bunny, Link, Buck | 8+ |
+| **Mysteryvibe** | Crescendo, Tenuto, Massimo | 6+ |
+| **Libo** | PiPiJing, MonsterPub, XiaoLu | 20+ |
+| **Svakom** | Alex, Don, Vito, Ella | 15+ |
+| **Picobong** | 6 Functions, Surfer, Diver, Ring | 12+ |
+| **Prettylove** | Aegu BLE | 10+ |
+| **Vibratissimo** | Panty Vibrator | 5+ |
+| **Lovehoney** | Desire, Prostate | 8+ |
+| **Aneros** | MGX, Helix, Trident | 10+ |
+| **Womanizer** | Womanizer | 15+ |
+| **Fun Factory** | Fun Factory | 12+ |
+| **OhMiBod** | OhMiBod 4.0, Esca 2 | 8+ |
+| **Fleshlight** | Fleshlight Launch | 5+ |
+| **Twerking Butt** | Twerking Butt | 3+ |
+| **SayberX** | SayberX | 5+ |
+| **Zalo** | Queen | 3+ |
+| **Muse** | Muse S | 3+ |
+| **Realov** | Realov Vibe | 5+ |
+| **Le Wand** | Le Wand | 8+ |
+| **L'Amourose** | L'Amourose | 6+ |
+| **Petra** | Petra | 5+ |
+| **Sculpted** | Sculpted | 4+ |
+| **Geeky Vibes** | Geeky Vibes | 6+ |
+| **Blush** | Blush | 8+ |
+| **Aogu** | Aogu BLE | 10+ |
+| **Patoo** | Patoo | 3+ |
+| **Cueme** | FUNCODE | 5+ |
+| **Cupido** | Cupido | 5+ |
+| **Jolted** | Jolted | 4+ |
+| **Desire** | Desire | 5+ |
+| **Youou** | VX001 | 4+ |
+| **Realtouch** | Realtouch | 2+ |
+| **Erostek** | ET312 | 2+ |
+| **Rez** | Trancevibrator | 2+ |
+| **Y 1800+ modelos más** | ... | 1800+ |
+
+**Para usar dispositivos Buttplug:**
 
 1. **Instalar Intiface Engine** (gratis):
-   - Windows: `winget install Intiface.IntifaceEngine`
-   - macOS: `brew install intiface-engine`
-   - Linux: `cargo install intiface_engine`
+   ```bash
+   # Windows
+   winget install Intiface.IntifaceEngine
+   
+   # macOS
+   brew install intiface-engine
+   
+   # Linux
+   cargo install intiface_engine
+   ```
 
 2. **Iniciar el servicio**:
    ```bash
@@ -72,7 +127,7 @@ Para usar dispositivos Buttplug:
 3. **Tu app escaneará automáticamente** hasta 2000+ dispositivos vía WebSocket
 
 > 📖 **Ver guía completa:** [documentacion/directivas/INTIFACE_ENGINE_SETUP.md](documentacion/directivas/INTIFACE_ENGINE_SETUP.md)
-> 
+>
 > 📖 **Ver lista completa:** [documentacion/resumenes/DISPOSITIVOS_2000_PLUS.md](documentacion/resumenes/DISPOSITIVOS_2000_PLUS.md)
 
 ---
